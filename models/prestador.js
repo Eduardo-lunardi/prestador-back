@@ -6,7 +6,8 @@ let PrestadorModel = new Schema({
     email: { type: String, required: true },
     senha: { type: String, required: true, unique: true },
     telefone: { type: Number, required: true },
-    servico: { type: Array }
+    servico: { type: Array },
+    roles: { type: Array, required: true }
 }, { collection: 'prestador', versionKey: false })
 
 module.exports = mongoose.model('Prestador', PrestadorModel)
